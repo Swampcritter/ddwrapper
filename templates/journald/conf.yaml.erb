@@ -1,0 +1,13 @@
+logs:
+    - type: journald
+      container_mode: true
+      path: /run/log/journal/
+      include_units:
+          - docker.service
+          - systemd.service
+          - systemd-logind.service
+          - crond.service
+          - CROND.service
+      exclude_units:
+          - sshd.service
+          - sudo

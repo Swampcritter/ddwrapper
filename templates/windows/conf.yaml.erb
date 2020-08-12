@@ -1,0 +1,17 @@
+#init_config:
+
+#instances:
+
+logs:
+    - type: windows_event
+      channel_path: Application
+      service: Application
+      source: Application
+    - type: windows_event
+      channel_path: System
+      service: System
+      source: System
+    - type: windows_event
+      channel_path: Security
+      service: Security
+      source: Security 
