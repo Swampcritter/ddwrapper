@@ -1,8 +1,8 @@
-# datadog_wrapper
+# ddwrapper
 
 About this cookbook:
 ======================
-The get_datadog cookbook wraps the public datadog cookbook found at:  
+The ddwrapper cookbook wraps the public datadog cookbook found at:  
 **Supermarket:** https://supermarket.chef.io/cookbooks/datadog  
 **Github:**  https://github.com/DataDog/chef-datadog
 
@@ -72,6 +72,7 @@ configured, independent of a framework. JournalD for Linux is actually a custom 
 it has a combination of a unique pre-configuration recipe and then the variables are found in a conf.yaml
 file as a template.
 
+This wrapper cookbook actually HAS the JournalD and Windows Event Logs capability, ready to deploy.
 
 Configure APM Monitoring
 ---------
