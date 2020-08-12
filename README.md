@@ -93,8 +93,7 @@ aggregated into flows, each showing traffic between one source and one destinati
 network page and network map. Each flow contains network metrics such as throughput, bandwidth, retransmit 
 count, and source/destination information down to the IP, port, and PID levels.
 
-**Notice**
-Datadog does not currently support Windows and MacOS platforms for Network Performance Monitoring.
+Note: Datadog does not currently support Windows and MacOS platforms for Network Performance Monitoring.
 
 **Chef Deployment Script**
 Enable the 'Sysprobe' attribute in the attributes/default.rb file:
