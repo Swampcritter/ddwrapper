@@ -74,6 +74,29 @@ file as a template.
 
 This wrapper cookbook actually HAS the JournalD and Windows Event Logs capability, ready to deploy.
 
+**Chef Deployment Integration**
+Enable the 'logs' agent in the attributes/default.rb file: default['datadog']['enable_logs_agent'] = true
+
 Configure APM Monitoring
 ---------
 Application Performance Monitoring provides deep insight into your application’s performance.
+
+
+Configure Network Performance Monitoring (NPM)
+---------
+Datadog Network Performance Monitoring (NPM) is designed to give you visibility into your network traffic across 
+any tagged object in Datadog: from containers to hosts, services, and availability zones. Connection data is 
+aggregated into flows, each showing traffic between one source and one destination, through a customizable 
+network page and network map. Each flow contains network metrics such as throughput, bandwidth, retransmit 
+count, and source/destination information down to the IP, port, and PID levels.
+
+**Notice**
+Datadog does not currently support Windows and MacOS platforms for Network Performance Monitoring.
+
+**Chef Deployment Script**
+Enable the 'Sysprobe' attribute in the attributes/default.rb file: default['datadog']['system_probe']['enabled'] = true
+Next run the Chef client on the server instance: chef-client -r recipe["ddwrapper::linux-sysprobe"]
+
+**Integrations Information**
+For more details into how the Network Performance Monitoring (NPM) is configured: https://docs.datadoghq.com/network_performance_monitoring
+
